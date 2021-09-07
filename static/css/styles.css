@@ -9575,6 +9575,10 @@ textarea.form-control-lg {
     margin-left: auto !important;
   }
 
+  .my-div-style{
+    margin-top: 6rem;
+  }
+
   .my-lg-0 {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
