@@ -3,13 +3,13 @@ from django.urls import reverse_lazy
 
 from django.http.response import HttpResponse
 from django.shortcuts import render
+from django.contrib import messages
 from django.views import generic
 
 from .forms import InquiryForm
 
 logger = logging.getLogger(__name__)
 
-from django.contrib import messages
 
 # Create your views here.
 def index(request):

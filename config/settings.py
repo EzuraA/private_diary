@@ -117,6 +117,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+#ここからカスタマイズ部分
 STATICFILES_DIRS = (
     BASE_DIR, 'static',
 )
