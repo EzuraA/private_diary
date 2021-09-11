@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from logging import WARNING
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
@@ -123,7 +124,7 @@ STATIC_URL = '/static/'
 
 #ここからカスタマイズ部分
 STATICFILES_DIRS = (
-    BASE_DIR, 'static',
+    os.path.join(BASE_DIR, 'static'),
 )
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
@@ -156,3 +157,6 @@ ACCOUNT_USERNAME_REQUIRED = False
 # サインアップにメールアドレス認証をはさむよう設定
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
 ACCOUNT_EMAIL_REQUIRED = True
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
